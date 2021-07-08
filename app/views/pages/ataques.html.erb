@@ -1,0 +1,78 @@
+
+
+
+<div class="container_2">
+
+<div class="container_2">
+<h2>Ataques Detectados Hoy</h2>
+						<div class="row">
+							<div class="column">
+						
+										<%= line_chart @today_logs_with_attacks.group_by_hour(:time_stamp_log).count.transform_keys { |key| key.strftime("%H:00") }, xtitle: 'Hora del Día', ytitle: 'Número de Ataques' %>	
+	
+							</div>
+
+							<div class="column">
+								<div id="accordion">
+										<%= render @alert_logs %>
+								</div>
+								</div>
+
+
+
+								</div>
+</div>
+	   
+
+
+		<div class="container_2">
+			<h2>Registros</h2>
+		<table class="table" id="logs">
+												<%= turbo_frame_tag "logs-table-#{@table_page}" do %>
+				<thead>
+						<tr>
+								<th scope="col">Usuario</th>
+								<th scope="col">Base</th>
+								<th scope="col">IP</th>
+								<th scope="col">PID</th>
+								<th scope="col">Tipo de Ataque</th>
+								<th scope="col">Fecha y Hora</th>
+								<th scope="col">Comando</th>
+								<th scope="col">Duración</th>
+								<th scope="col">Consulta</th>
+
+						</tr>
+				</thead>
+				<tbody>
+						<% @logs.each do |log| %>
+								<tr>
+										<td><%= log.nombre_usuario %></td>
+										<td><%= log.nombre_base %></td>
+										<td><%= log.ip_log %></td>
+										<td><%= log.pid%></td>
+										<td><%= log.tipo_ataque %></td>
+										<td><%= log.time_stamp_log.strftime("%m/%d/%Y a las %I:%M%p") %></td>
+										<td><%= log.query.nombre_query %></td>
+										<td><%= log.query.duracion %></td>
+										<td><%= log.query.comando %></td>
+								</tr>
+						<% end %>
+				</tbody>
+		</table>
+
+		<% if @table_page >= 2 %>
+				<%= link_to 'anterior', ataques_path(page: @table_page - 1) %>
+		<% end %>
+
+		<% if @table_page >= 2 && !@next_logs.empty? %>
+				|
+		<% end %>
+
+		<% unless @next_logs.empty? %>
+				<%= link_to 'siguiente', ataques_path(page: @table_page + 1) %>
+		<% end %>
+<% end %>
+</div>
+</div>
+
+</div>

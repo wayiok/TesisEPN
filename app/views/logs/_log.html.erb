@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header" id="heading<%= log.id.to_s %>">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse<%= log.id.to_s %>" aria-expanded="false" aria-controls="collapse<%= log.id.to_s %>">
+        Alerta desde <%= log.ip_log %>
+      </button>
+    </h5>
+  </div>
+
+  <div id="collapse<%= log.id.to_s %>" class="collapse" aria-labelledby="heading<%= log.id.to_s %>" data-parent="#accordion">
+    <div class="card-body">
+
+      <h5> <label class="thick">Injección detectada: </label> <%= log.tipo_ataque %> </h5>
+      
+      <label class="thick">Nombre de Usuario: </label> <%= log.nombre_usuario%> <br>
+      <label class="thick">Base de Datos: </label> <%= log.nombre_base%> <br>
+      <label class="thick">IP: </label> <%= log.ip_log%> <br>
+      <label class="thick">PID: </label> <%= log.pid%> <br>
+      <label class="thick">Fecha y Hora: </label> <%= log.time_stamp_log%> <br>
+      <label class="thick">Comando: </label> <%= log.query.nombre_query%> <br>
+      <label class="thick">Query: </label> <%= log.query.comando%> <br>
+      
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<%= form_with url: analyze_website_path, method: 'post', local: true do |f| %>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Ingresar pagina a analizar</label>
+    <%= f.text_field :url, class: "form-control", placeholder: "www.ejemplo.com" %>
+    </br>
+    <%= f.submit 'Analizar', class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">Resultado Análisis:</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" disabled><%= @analisis_result %></textarea>
+</div>

@@ -1,0 +1,38 @@
+
+<div class="container_2">
+<div class="container_2">
+	<h2>Anomalías Encontradas</h1>
+<div class="row">
+	<div class="column">
+		<%= column_chart @today_logs.group_by_hour(:time_stamp_log).count.transform_keys { |key| key.strftime("%H:00") }, xtitle: 'Hora del día (Formato de 24h)', ytitle: 'Número de Anomalías' %>
+	</div>
+	<div class="column">
+		<% pie_chart_logs = @today_logs.group(:ataque).count.except(nil) %>
+<% pie_chart_logs[:Ataques] = pie_chart_logs.delete true %>
+<% pie_chart_logs[:Anomalías] = pie_chart_logs.delete false %>
+<%= pie_chart pie_chart_logs %>
+	</div>
+</div>
+</div>
+
+
+
+<div class="container_2">
+<h2>Ataques Detectados</h1>
+<div class="row">
+	<div class="column">
+		<%= column_chart @today_logs_with_attacks.group_by_hour(:time_stamp_log).count.transform_keys { |key| key.strftime("%H:00") }, xtitle: 'Hora del día (Formato de 24h)', ytitle: 'Número de Ataques' %>
+	</div>
+	<div class="column">
+		<%= pie_chart @today_logs_with_attacks.group(:tipo_ataque).count.except(nil) %>
+		
+	</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+

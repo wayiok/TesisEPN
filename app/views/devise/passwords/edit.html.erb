@@ -1,0 +1,29 @@
+<h1>Cambio de Contraseña</h1>
+
+<img src="https://afckstechnologies.in/img/public_blue_users.png">
+
+<div class="center">
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+    <div class="label"> Nueva Contraseña </div>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class:'field' %>
+
+
+   <div class="label">Confirma tu Nueva Contraseña </div>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'field' %>
+
+
+  <div class="actions">
+    <%= f.submit "Cambiar Contraseña",  class: 'button' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</div>
