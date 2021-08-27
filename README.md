@@ -39,5 +39,6 @@ $ rails server
 
 ### Autores:
 -
+
 * Cesar Añasco: 	[cesar.anasco@epn.edu.ec](mailto:cesar.anasco@epn.edu.ec)
 * Karen Morocho: 	[karen.morocho@epn.edu.ec](mailto:karen.morocho@epn.edu.ec)
