@@ -3,7 +3,7 @@
 Este repositorio encuentra disponible en el link: [PROTOTIPO](https://tesisw.herokuapp.com/) , con las funcionalidades limitadas al servidor de prueba. Para hacer uso completo de todas sus funcionalidades, los manuales de instalación y uso serán entregados acorde la entrega de este repositorio. 
 
 ### Herramientas utilizadas:
--
+
 * [Python 3](https://www.python.org/download/releases/3.0/) 
 * [Pip](https://pypi.org/project/pip/)
 * [PyOD](https://pyod.readthedocs.io/en/latest/)
@@ -15,7 +15,7 @@ Este repositorio encuentra disponible en el link: [PROTOTIPO](https://tesisw.her
 * [Ruby on Rails](https://rubyonrails.org/)
 
 ### Servidor Web (Front y Back end):
--
+
 Una vez instalado el programa se puede ejecutar:
 
 Los siguientes comandos para levantar la base dentro del framework:
@@ -38,8 +38,7 @@ $ rails server
 ```
 
 ### Autores:
--
-Correos institucionales de los autores: 
+
 
 * Cesar Añasco: 	[cesar.anasco@epn.edu.ec](mailto:cesar.anasco@epn.edu.ec)
 * Karen Morocho: 	[karen.morocho@epn.edu.ec](mailto:karen.morocho@epn.edu.ec)
