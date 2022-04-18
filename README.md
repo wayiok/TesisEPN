@@ -30,7 +30,7 @@ The following commands to use the data from ttest for the display of the graphs:
 $ rails db:seeds
 ```
 
-Once the base is created, we raise the resver with the command:
+Once the base is created, we start the server with the command:
 
 ```
 $ rails server
