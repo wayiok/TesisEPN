@@ -1,8 +1,8 @@
-## PROTOTIPO DE SISTEMA PARA LA IDENTIFICACIÓN Y PREDICCIÓN DE ATAQUES A SISTEMAS DE BASES DE DATOS UTILIZANDO TÉCNICAS DE MINERÍA DE DATOS
+## SYSTEM PROTOTYPE FOR THE IDENTIFICATION AND PREDICTION OF ATTACKS ON DATABASE SYSTEMS USING DATA MINING TECHNIQUES
 
-Este repositorio encuentra disponible en el link: [PROTOTIPO](https://tesisw.herokuapp.com/) , con las funcionalidades limitadas al servidor de prueba. Para hacer uso completo de todas sus funcionalidades, los manuales de instalación y uso serán entregados acorde la entrega de este repositorio. 
+This repository is available at the link: [PROTOTYPE](https://tesisw.herokuapp.com/) , with functionalities limited to the test server. To make full use of all its features, the installation and use manuals will be delivered according to the delivery of this repository.
 
-### Herramientas utilizadas:
+### Needed Tools and Libraries: 
 
 * [Python 3](https://www.python.org/download/releases/3.0/) 
 * [Pip](https://pypi.org/project/pip/)
@@ -14,30 +14,29 @@ Este repositorio encuentra disponible en el link: [PROTOTIPO](https://tesisw.her
 * [Matplotlib](https://matplotlib.org/)
 * [Ruby on Rails](https://rubyonrails.org/)
 
-### Servidor Web (Front y Back end):
+### Web Server (Front and Back end):
 
-Una vez instalado el programa se puede ejecutar:
+Once the program is installed you can run:
 
-Los siguientes comandos para levantar la base dentro del framework:
+The following commands to raise the base within the framework:
 
 ```
 $ rails db:create
 $ rails db:migrate
 ```
 
-Los siguientes comandos para utilizar los datos de tprueba para la visualización de los gráficos:
-
+The following commands to use the data from ttest for the display of the graphs:
 ```
 $ rails db:seeds
 ```
 
-Una vez creada la base, levantamos el resvidor con el comando:
+Once the base is created, we raise the resver with the command:
 
 ```
 $ rails server
 ```
 
-### Autores:
+### Authors:
 
 
 * Cesar Añasco: 	[cesar.anasco@epn.edu.ec](mailto:cesar.anasco@epn.edu.ec)
